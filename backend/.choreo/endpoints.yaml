@@ -14,11 +14,11 @@ endpoints:
   - name: "REST API"
     displayName: "REST API"
     type: REST
-    service:
-      basePath: /
-      port: 8000
+    port: 8000
+    context: /
     networkVisibilities:
       - Public
+
 
 
 
