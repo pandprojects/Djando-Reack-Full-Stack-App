@@ -5,7 +5,8 @@ endpoints:
   - name: rest_api
     displayName: "REST API"
     type: REST
-    port: 8000
-    context: /
+    service:
+      port: 8000
+      basePath: /
     networkVisibilities:
       - Public
