@@ -1,10 +1,25 @@
-version: 1.2
+# version: 0.1
 
-endpoints:
-  - name: "REST API"
-    port: 8000
-    type: REST
-    networkVisibility: Public
-    context: /
+# endpoints:
+#   - name: "REST API"
+#     port: 8000
+#     type: REST
+#     networkVisibility: Public
+#     context: /
+
+version: 1.0.0
+
+components:
+  - name: rest-api
+    type: service
+    source:
+      path: ./src
+    endpoints:
+      - name: http-endpoint
+        type: REST
+        context: /
+        port: 8000
+        networkVisibility: Public
+
 
 
