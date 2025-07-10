@@ -9,6 +9,7 @@ def root_view(request):
     return JsonResponse({"message": "API root is alive!"})
 
 urlpatterns = [
+    path("", root_view, name="api_root")
     path("admin/", admin.site.urls),
     path("api/user/register/", CreateUserView.as_view(), name="register"),
     path("api/token/", TokenObtainPairView.as_view(), name="get_token"),
