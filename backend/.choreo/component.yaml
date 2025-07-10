@@ -4,11 +4,9 @@ schemaVersion: "1.2"
 endpoints:
   - name: rest_api
     displayName: "REST API"
-    port: 8000
     type: REST
-    # service:
-    #   port: 8000
-    #   basePath: /
+    service:
+      port: 8000
+      basePath: /
     networkVisibilities:
       - Public
-    context: /

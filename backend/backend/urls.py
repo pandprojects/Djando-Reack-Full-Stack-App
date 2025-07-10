@@ -1,7 +1,12 @@
 from django.contrib import admin
+from django.http import JsonResponse
 from django.urls import path, include
 from api.views import CreateUserView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
+
+def root_view(request):
+    return JsonResponse({"message": "API root is alive!"})
 
 urlpatterns = [
     path("admin/", admin.site.urls),
