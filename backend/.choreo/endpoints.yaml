@@ -7,17 +7,19 @@
 #     networkVisibility: Public
 #     context: /
 
+version: 1.0.0
 schemaVersion: "1.2"
 
 endpoints:
   - name: "REST API"
     displayName: "REST API"
+    type: REST
     service:
       basePath: /
       port: 8000
-    type: REST
     networkVisibilities:
       - Public
+
 
 
 
